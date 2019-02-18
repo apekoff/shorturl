@@ -1,0 +1,26 @@
+{
+  "name": "url",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "original": {
+      "type": "string",
+      "required": true
+    },
+    "short": {
+      "type": "string",
+      "required": true
+    },
+    "visits": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
