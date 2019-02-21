@@ -14,7 +14,7 @@
     "RoleMapping": {},
     "Role": {},
     "url": {
-      "1": "{\"original\":\"string\",\"short\":\"string\",\"visits\":0,\"id\":1}"
+      "1": "{\"original\":\"https://google.com\",\"short\":\"ggl\",\"visits\":0,\"id\":1}"
     }
   }
 }
