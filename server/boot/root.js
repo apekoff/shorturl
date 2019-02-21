@@ -3,7 +3,7 @@
 module.exports = function(server) {
   // Install a `/` route that returns server status
   var router = server.loopback.Router();
-  router.get('/go/:short', (req, res) => {
+  router.get('/:short', (req, res) => {
     let Url = server.models.Url;
     let short = req.params.short;
     Url.findOne({where: {short}}, function(err, url) {
