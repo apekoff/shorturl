@@ -1,12 +1,14 @@
 {
   "name": "shorturl",
   "version": "1.0.0",
+  "author": "Alexey Pekov",
   "main": "server/server.js",
   "engines": {
     "node": ">=6"
   },
   "scripts": {
     "lint": "eslint .",
+    "client-install": "npm install --prefix client",
     "start": "node .",
     "server": "nodemon server/server.js",
     "client": "npm run start --prefix client",
