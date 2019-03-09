@@ -22,13 +22,7 @@ class UrlForm extends Component {
     let reUrl = new RegExp(
       '\\b((http|https):\\/\\/?)[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|\\/?))', 'i',
     );
-    if (reUrl.test(url)) {
-
-      urlExists(url, function(err, exists) {
-        console.log(err);
-        return exists;
-      });
-    }
+    return reUrl.test(url);
   };
 
   isValidText(text) {

@@ -1,0 +1,11 @@
+{
+  "files": {
+    "loopback#static": [
+      {
+        "name": "default",
+        "paths": ["/"],
+        "params": "$!../build"
+      }
+    ]
+  }
+}
