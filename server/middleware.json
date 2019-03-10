@@ -42,13 +42,9 @@
     }
   },
   "files": {
-    "loopback#static": [
-      {
-        "name": "default",
-        "paths": [ "/" ],
-        "params": "$!../client/build"
-      }
-    ]
+    "loopback#static": {
+      "params": "$!../build"
+    }
   },
   "final": {
     "loopback#urlNotFound": {}
