@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Created extends Component {
   render() {
     console.log(this.props.createdData);
-    const url = '/' + this.props.createdData.short;
+    const domain = window.location.origin;
+    const url = domain + '/' + this.props.createdData.short;
     return (
       <div>
         Url created <br />
