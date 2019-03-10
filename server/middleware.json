@@ -46,7 +46,7 @@
       {
         "name": "default",
         "paths": [ "/" ],
-        "params": "$!../build"
+        "params": "$!../client/build"
       }
     ]
   },

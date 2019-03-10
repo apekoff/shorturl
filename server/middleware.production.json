@@ -3,8 +3,8 @@
     "loopback#static": [
       {
         "name": "default",
-        "paths": ["/"],
-        "params": "$!../build"
+        "paths": [ "/" ],
+        "params": "$!../client/build"
       }
     ]
   }
