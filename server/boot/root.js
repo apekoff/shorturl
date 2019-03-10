@@ -7,13 +7,13 @@ module.exports = function(server) {
   router.post('/validate-url', (req, res) => {
     let url = req.body.url;
     urlExists(url, function(err, exists) {
-      res.json({'url-exists': exists});
+      res.json({ 'url-exists': exists });
     });
   });
   router.get('/:short', (req, res) => {
     let Url = server.models.Url;
     let short = req.params.short;
-    Url.findOne({where: {short}}, function(err, url) {
+    Url.findOne({ where: { short } }, function(err, url) {
       if (err) {
         return res.status(404).end();
       }
@@ -24,6 +24,6 @@ module.exports = function(server) {
       res.redirect(url.original);
     });
   });
-  router.get('/', server.loopback.status());
+  // router.get('/', server.loopback.status());
   server.use(router);
 };
