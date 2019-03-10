@@ -41,7 +41,15 @@
       "paths": [ "${restApiRoot}" ]
     }
   },
-  "files": {},
+  "files": {
+    "loopback#static": [
+      {
+        "name": "default",
+        "paths": [ "/" ],
+        "params": "$!../build"
+      }
+    ]
+  },
   "final": {
     "loopback#urlNotFound": {}
   },
