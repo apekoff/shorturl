@@ -24,6 +24,6 @@ module.exports = function(server) {
       res.redirect(url.original);
     });
   });
-  // router.get('/', server.loopback.status());
+  router.get('/');
   server.use(router);
 };
