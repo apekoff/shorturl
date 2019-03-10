@@ -7,7 +7,7 @@ class Created extends Component {
     return (
       <div>
         Url created <br />
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noopener noreferrer">
           <code>{url}</code>
         </a>
       </div>

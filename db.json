@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "url": 40
+    "url": 41
   },
   "models": {
     "User": {},
@@ -52,7 +52,8 @@
       "36": "{\"original\":\"http://google.com\",\"short\":\"05812c6948d5f665e85de87cac249e50\",\"visits\":0,\"id\":36}",
       "37": "{\"original\":\"http://ya.ru\",\"short\":\"a80e0eafb41466280aad6f61adee9a3c\",\"visits\":0,\"id\":37}",
       "38": "{\"original\":\"http://google.com\",\"short\":\"862eb24b1fd9a858efdaecb183599169\",\"visits\":0,\"id\":38}",
-      "39": "{\"original\":\"http://google.com\",\"short\":\"3a9fca5837c65b5548190a3b68214dd4\",\"visits\":0,\"id\":39}"
+      "39": "{\"original\":\"http://google.com\",\"short\":\"3a9fca5837c65b5548190a3b68214dd4\",\"visits\":0,\"id\":39}",
+      "40": "{\"original\":\"http://google.com\",\"short\":\"86be10e47e4e013a213b9bf00a82218d\",\"visits\":0,\"id\":40}"
     }
   }
 }
