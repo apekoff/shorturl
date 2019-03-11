@@ -1,7 +1,14 @@
 {
   "files": {
-    "loopback#static": {
-      "params": "$!../build"
-    }
+    "loopback#static": [
+      {
+        "paths": ["/"],
+        "params": "$!../build"
+      },
+      {
+        "paths": ["*"],
+        "params": "$!../build"
+      }
+    ]
   }
 }
