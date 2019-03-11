@@ -1,9 +1,13 @@
 'use strict';
 const urlExists = require('url-exists');
+const shortid = require('shortid');
 
 const isValidUrl = function(err, done) {
   let url = this.original;
-  let reUrl = new RegExp('\\b((http|https):\\/\\/?)[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|\\/?))', 'i');
+  let reUrl = new RegExp(
+    '\\b((http|https):\\/\\/?)[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|\\/?))',
+    'i'
+  );
   if (!reUrl.test(url)) {
     urlExists(url, function(error, exists) {
       if (!exists) err();
@@ -19,8 +23,17 @@ const isValidText = function(err, done) {
 };
 
 module.exports = function(Url) {
-  Url.validateAsync('original', isValidUrl, { message: 'Original url must be valid link' });
-  // Url.validateAsync('short', isValidText, {
-  //   message: 'Short name must be beetwen 1,12 chars. Allows only alpha numerical characters',
-  // });
+  Url.observe('before save', function(ctx, next) {
+    if (!ctx.instance.short) {
+      ctx.instance.short = shortid.generate();
+    }
+    next();
+  });
+  Url.validateAsync('original', isValidUrl, {
+    message: 'Original url must be valid link',
+  });
+  Url.validateAsync('short', isValidText, {
+    message:
+      'Short name must be beetwen 1,12 chars. Allows only alpha numerical characters',
+  });
 };

@@ -25,6 +25,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
     "serve-favicon": "^2.0.1",
+    "shortid": "^2.2.14",
     "strong-error-handler": "^3.0.0",
     "url-exists": "^1.0.3"
   },

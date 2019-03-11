@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uniqueString from 'unique-string';
 import axios from 'axios';
 
 class UrlForm extends Component {
@@ -50,7 +49,7 @@ class UrlForm extends Component {
 
     let url = {
       original: this.refs.original.value,
-      short: !this.refs.short ? uniqueString() : this.refs.short.value,
+      short: !this.refs.short ? '' : this.refs.short.value,
     };
     this.addUrl(url);
   }
