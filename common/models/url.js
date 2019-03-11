@@ -17,7 +17,7 @@ const isValidUrl = function(err, done) {
 };
 const isValidText = function(err, done) {
   let short = this.short;
-  let reText = new RegExp('\\b[a-zA-Z0-9]{7}\\b|\\b[a-zA-Z0-9]{1,12}\\b');
+  let reText = new RegExp('\\b[a-zA-Z0-9_]{7}\\b|\\b[a-zA-Z0-9_]{1,12}\\b');
   if (!reText.test(short) && short.length !== 0) err();
   done();
 };
