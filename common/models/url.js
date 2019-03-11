@@ -29,6 +29,7 @@ module.exports = function(Url) {
     }
     next();
   });
+  Url.validatesUniquenessOf('short', {message: 'Short Url is not unique'});
   Url.validateAsync('original', isValidUrl, {
     message: 'Original url must be valid link',
   });
